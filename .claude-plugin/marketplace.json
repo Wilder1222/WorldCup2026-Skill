@@ -7,7 +7,7 @@
     "plugins": [
         {
             "name": "worldcup2026-skills",
-            "source": ".",
+            "source": "./",
             "description": "AI Football Intelligence System for 2026 FIFA World Cup. Provides multi-model match prediction (ELO + Bayesian + xG + Monte Carlo + ML), team analysis, player evaluation, and schedule lookup.",
             "version": "1.0.0",
             "author": {
