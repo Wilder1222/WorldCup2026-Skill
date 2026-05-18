@@ -71,6 +71,12 @@ Invoke when asked:
 {
   "analysis_type": "schedule",
   "stage": "",
+  "data_verification": {
+    "source": "local_cache_unverified | user_provided",
+    "verified_against_fifa": false,
+    "data_as_of": "2026-05-18",
+    "note": "Fixture data not officially verified by FIFA — refer to https://www.fifa.com for confirmed schedule"
+  },
   "results": [
     {
       "id": "",
@@ -84,3 +90,9 @@ Invoke when asked:
   ]
 }
 ```
+
+## Data Verification Rules
+
+- **All schedule output must include a `data_verification` field**
+- **Group draw results and match fixtures must cite their source**: data in `data/fixtures.json` is sample/estimated and has not been officially confirmed by FIFA
+- **Always inform the user**: fixture data must be verified against the [FIFA official website](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026)

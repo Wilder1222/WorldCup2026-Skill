@@ -39,6 +39,19 @@ Commands:
   evolve <result>          Record actual match result + evolve model
                            e.g. wc2026 evolve '{"match":"Brazil vs Argentina","score":"2-1"}'
 
+  predictions list         列出所有已存储的预测记忆文档
+                           --type predictions|analyses|all
+                           --status pending|correct|incorrect|partial
+
+  predictions get <match>  查看单条预测记忆文档（按比赛名或 ID）
+                           e.g. wc2026 predictions get "Brazil vs Argentina"
+
+  predictions verify <match> <result>
+                           写入实际比赛结果，验证预测准确性
+                           e.g. wc2026 predictions verify "Brazil vs Argentina" '{"score":"2-1","outcome":"win"}'
+
+  predictions report       生成 Markdown 准确率报告至 data/predictions/
+
   --mcp                    Start as MCP Tool Server
   --help                   Show this help
 
@@ -47,6 +60,9 @@ Examples:
   npx worldcup2026-skills analyze-team "Brazil"
   npx worldcup2026-skills schedule --stage group
   npx worldcup2026-skills simulate "France vs England" --iterations 50000
+  npx worldcup2026-skills predictions list --status pending
+  npx worldcup2026-skills predictions verify "Germany vs Portugal" '{"score":"2-0","outcome":"win"}'
+  npx worldcup2026-skills predictions report
 `;
 
 async function main() {
@@ -118,6 +134,60 @@ async function main() {
                 if (!payload) { console.error('Error: provide result JSON string'); process.exit(1); }
                 const matchResult = JSON.parse(payload);
                 result = await system.recordResult(matchResult);
+                break;
+            }
+
+            case 'predictions': {
+                const sub = args[1];
+                if (!sub || sub === 'list') {
+                    const typeIdx = args.indexOf('--type');
+                    const type = typeIdx !== -1 ? args[typeIdx + 1] : 'predictions';
+                    const statusIdx = args.indexOf('--status');
+                    const filters = statusIdx !== -1 ? { status: args[statusIdx + 1] } : {};
+                    const records = system.listPredictions(type, filters);
+                    // 输出简洁摘要列表
+                    const summary = records.map(r => ({
+                        id: r.id,
+                        match: r.match || r.subject,
+                        created_at: r.created_at,
+                        status: r.status,
+                        confidence: r.prediction && r.prediction.confidence
+                            ? `${(r.prediction.confidence * 100).toFixed(1)}%`
+                            : (r.analysis && r.analysis.confidence
+                                ? `${(r.analysis.confidence * 100).toFixed(1)}%` : 'N/A'),
+                        actual_result: r.actual_result ? r.actual_result.score : null
+                    }));
+                    result = { analysis_type: 'predictions_list', total: records.length, records: summary };
+                } else if (sub === 'get') {
+                    const matchOrId = args[2];
+                    if (!matchOrId) { console.error('Error: provide match name or prediction ID'); process.exit(1); }
+                    const record = system.getPrediction(matchOrId);
+                    if (!record) { console.error(`Not found: ${matchOrId}`); process.exit(1); }
+                    result = record;
+                } else if (sub === 'verify') {
+                    const matchOrId = args[2];
+                    const payload = args[3];
+                    if (!matchOrId || !payload) {
+                        console.error('Usage: predictions verify "<match>" \'{"score":"2-1","outcome":"win"}\'');
+                        process.exit(1);
+                    }
+                    const actualResult = JSON.parse(payload);
+                    const updated = system.verifyPrediction(matchOrId, actualResult);
+                    if (!updated) { console.error(`Not found: ${matchOrId}`); process.exit(1); }
+                    result = {
+                        analysis_type: 'prediction_verified',
+                        match: matchOrId,
+                        status: updated.record.status,
+                        verdict: updated.record.verdict,
+                        file: updated.filePath
+                    };
+                } else if (sub === 'report') {
+                    const reportPath = system.generatePredictionReport();
+                    result = { analysis_type: 'report_generated', report_path: reportPath };
+                } else {
+                    console.error(`Unknown predictions subcommand: ${sub}`);
+                    process.exit(1);
+                }
                 break;
             }
 

@@ -84,3 +84,15 @@ Weights are dynamically updated by the self-learning optimizer after each real m
 - ALWAYS include risk_analysis from Debate Agent
 - ALWAYS calibrate confidence — do not report 95%+ confidence for football
 - Monte Carlo MUST run ≥10,000 iterations
+- **All predictions must include a `data_verification` field indicating whether data used has been verified**
+- **If using unverified local cache, reduce confidence by 30% and append note "based on unverified local data"**
+- **Sample output `data_verification` field must include:**
+  ```json
+  "data_verification": {
+    "team_data_verified": false,
+    "fixture_data_verified": false,
+    "data_as_of": "2026-05-18",
+    "source": "local_cache_unverified",
+    "note": "Data not officially verified — predictions are for reference only"
+  }
+  ```

@@ -7,12 +7,14 @@
 
 const OrchestratorAgent = require('./agents/orchestrator');
 const MemoryAgent = require('./agents/memory');
+const PredictionStore = require('./memory/prediction-store');
 const { loadTeams, loadFixtures } = require('./memory/long-term');
 
 class WorldCupSkillsSystem {
     constructor(options = {}) {
         this.memory = new MemoryAgent(options);
         this.orchestrator = new OrchestratorAgent({ memory: this.memory, ...options });
+        this._store = this.memory.store;
     }
 
     /**
@@ -101,6 +103,40 @@ class WorldCupSkillsSystem {
     async recordResult(matchResult) {
         return this.orchestrator.recordAndEvolve(matchResult);
     }
+
+    /**
+     * List all stored prediction / analysis memory documents.
+     * @param {'predictions'|'analyses'|'all'} type
+     * @param {{ status?: 'pending'|'correct'|'incorrect'|'partial' }} [filters]
+     */
+    listPredictions(type = 'predictions', filters = {}) {
+        return this._store.list(type, filters);
+    }
+
+    /**
+     * Read a single prediction memory document.
+     * @param {string} matchOrId - match name or prediction_id
+     */
+    getPrediction(matchOrId) {
+        return this._store.get(matchOrId);
+    }
+
+    /**
+     * Write actual match result and update memory document status (correct / incorrect / partial).
+     * @param {string} matchOrId
+     * @param {{ score: string, outcome: 'win'|'draw'|'loss', notes?: string }} actualResult
+     */
+    verifyPrediction(matchOrId, actualResult) {
+        return this._store.recordActualResult(matchOrId, actualResult);
+    }
+
+    /**
+     * Generate a Markdown prediction accuracy report, saved to data/predictions/REPORT_{date}.md.
+     * @returns {string} reportPath
+     */
+    generatePredictionReport() {
+        return this._store.generateReport();
+    }
 }
 
 function parseMatchString(matchString) {
@@ -113,4 +149,4 @@ function parseMatchString(matchString) {
     throw new Error(`Cannot parse match string: "${matchString}". Use format "Team A vs Team B"`);
 }
 
-module.exports = { WorldCupSkillsSystem, parseMatchString };
+module.exports = { WorldCupSkillsSystem, parseMatchString, PredictionStore };

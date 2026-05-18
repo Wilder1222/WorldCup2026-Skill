@@ -68,7 +68,7 @@ class OrchestratorAgent {
             awayProfile
         });
 
-        // Step 5: Memory update
+        // Step 5: Memory update (short-term + disk persistence)
         const predictionId = `pred_${Date.now()}`;
         if (this.memory) {
             this.memory.storePrediction({
@@ -111,7 +111,7 @@ class OrchestratorAgent {
             this.playerAnalyst.analyzeSquad(teamData)
         ]);
 
-        return {
+        const analysisResult = {
             analysis_type: 'team_analysis',
             confidence: profile.confidence,
             model_sources: ['team-intelligence', 'player-analyst'],
@@ -121,6 +121,10 @@ class OrchestratorAgent {
                 squad_analysis: playerMap
             }
         };
+
+        // Persist to disk memory document
+        if (this.memory) this.memory.storeAnalysis(analysisResult);
+        return analysisResult;
     }
 
     /**
@@ -130,12 +134,16 @@ class OrchestratorAgent {
         const playerData = await this.dataScout.fetchPlayer(playerName);
         const analysis = await this.playerAnalyst.analyzeSinglePlayer(playerData);
 
-        return {
+        const analysisResult = {
             analysis_type: 'player_analysis',
             confidence: analysis.confidence,
             model_sources: ['player-analyst'],
             results: analysis
         };
+
+        // Persist to disk memory document
+        if (this.memory) this.memory.storeAnalysis(analysisResult);
+        return analysisResult;
     }
 
     /**

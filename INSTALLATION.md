@@ -1,73 +1,88 @@
 # ⚽ WorldCup 2026 Skills — Installation Guide
 
-This is a **Claude Code Plugin** with a built-in marketplace. Install it directly via Claude Code's plugin system.
+**Repository:** https://github.com/worldcup2026/worldcup2026-skills
+
+This project works with Claude Code, Claude Projects, GitHub Copilot, and the npx CLI. All methods start with cloning the repository.
+
+## Step 0 — Clone the Repository
+
+```bash
+git clone https://github.com/worldcup2026/worldcup2026-skills.git
+cd worldcup2026-skills
+```
+
+> Node.js ≥ 18.0.0 is required for CLI/npx usage.
+
+---
 
 ## Installation Methods
 
-### 1. **Claude Code Plugin** (Recommended)
+### 1. Claude Code Plugin (Recommended)
 
-#### Option A: Install via Local Path
+The `.claude-plugin/` directory contains a full plugin manifest. After installation, all 6 skills are auto-loaded inside Claude Code.
+
+#### Install via Claude Code (in-chat)
 
 ```bash
-# Add marketplace from local directory
-/plugin marketplace add ./path/to/worldcup2026-skills
+/plugins add marketplace https://github.com/worldcup2026/worldcup2026-skills
+```
 
-# Install the plugin
-/plugin install worldcup2026-skills@worldcup2026
+#### Install via CLI
 
-# Test a skill
+```bash
+claude plugins add marketplace https://github.com/worldcup2026/worldcup2026-skills
+```
+
+#### Verify the installation
+
+```bash
 /worldcup2026-skills:match-prediction
 ```
 
-#### Option B: Install via CLI
-
-```bash
-claude plugin marketplace add ./worldcup2026-skills
-claude plugin install worldcup2026-skills@worldcup2026
-```
-
-#### Option C: Test Without Installing
+#### Test Without Installing
 
 ```bash
 claude --plugin-dir ./worldcup2026-skills
 ```
 
-**Plugin structure:**
+**Plugin files:**
 - `.claude-plugin/plugin.json` — Plugin manifest
 - `.claude-plugin/marketplace.json` — Marketplace catalog
-- `skills/*/SKILL.md` — 6 auto-loaded skills (team-analysis, match-prediction, player-analysis, schedule-fetcher, analytics-engine, data-provider)
+- `skills/*/SKILL.md` — 6 auto-loaded skills
 
 ---
 
-### 3. **Claude / Claude Projects**
+### 2. Claude / Claude Projects
 
-#### Option A: Direct Repository Attachment
+#### Option A — Attach the GitHub Repository
+
 ```
 1. Create a new Claude Project
-2. Attach this repository
-3. Add to Project Instructions:
-   - Paste contents of CLAUDE.md
-   - System will auto-load all skills/*/SKILL.md
+2. Connect the GitHub repo: https://github.com/worldcup2026/worldcup2026-skills
+3. In Project Instructions, paste the contents of CLAUDE.md
+4. Claude will auto-load all skills/*/SKILL.md
 ```
 
-#### Option B: Copy CLAUDE.md
+#### Option B — Copy CLAUDE.md Only
+
 ```
-1. In Claude Project settings → Custom Instructions
-2. Copy the full contents of CLAUDE.md
-3. All 6 skills are now available to Claude
+1. Open Claude Project settings → Custom Instructions
+2. Paste the full contents of CLAUDE.md
+3. All 6 skills are now available
 ```
 
-**Why this works:** Claude reads SKILL.md files from `skills/` directory automatically.
+**Why this works:** Claude reads `SKILL.md` files from the `skills/` directory automatically when the repo is attached.
 
 ---
 
-### 2. **GitHub Copilot Extension**
+### 3. GitHub Copilot Extension
 
 ```
-1. Clone or add this workspace to VS Code
-2. Copilot auto-detects .github/copilot-instructions.md
-3. All agents and skills are auto-loaded
-4. Type in any editor and ask about World Cup predictions
+1. Clone the repository (see Step 0)
+2. Open the folder in VS Code
+3. Copilot auto-detects .github/copilot-instructions.md
+4. All 8 agents and 6 skills are active immediately
+5. Ask about World Cup predictions in any editor or chat
 ```
 
 **Files involved:**
@@ -76,16 +91,28 @@ claude --plugin-dir ./worldcup2026-skills
 
 ---
 
-### 3. **NPX CLI (Local Execution)**
+### 4. npx CLI
+
+#### One-shot (no install)
 
 ```bash
-# One-shot execution
-npx worldcup2026-skills predict "Brazil vs Argentina"
-npx worldcup2026-skills analyze-team "France"
-npx worldcup2026-skills player "Kylian Mbappe"
+npx github:worldcup2026/worldcup2026-skills predict "Brazil vs Argentina"
+npx github:worldcup2026/worldcup2026-skills analyze-team "France"
+npx github:worldcup2026/worldcup2026-skills player "Kylian Mbappe"
+npx github:worldcup2026/worldcup2026-skills schedule --stage group
+npx github:worldcup2026/worldcup2026-skills simulate "England vs Spain" --iterations 10000
+```
 
-# Global install
-npm install -g worldcup2026-skills
+#### From a local clone
+
+```bash
+node bin/worldcup-skills.js predict "Germany vs Portugal"
+```
+
+#### Global install from GitHub
+
+```bash
+npm install -g github:worldcup2026/worldcup2026-skills
 wc2026 predict "Germany vs Portugal"
 wc2026 standings --group A
 ```
@@ -96,17 +123,29 @@ wc2026 standings --group A
 
 ---
 
+## Platform Summary
+
+| Platform | How It Works | Key Files |
+|----------|--------------|-----------|
+| Claude Code Plugin | `.claude-plugin/` manifest, `/plugin install` | `.claude-plugin/plugin.json` |
+| Claude Projects | Attach GitHub repo + CLAUDE.md | `CLAUDE.md`, `skills/*/SKILL.md` |
+| GitHub Copilot | Open in VS Code, auto-detected | `.github/copilot-instructions.md`, `AGENTS.md` |
+| npx / CLI | `npx github:worldcup2026/worldcup2026-skills` | `bin/worldcup-skills.js` |
+
+---
+
 ## File Structure
 
 ```
 worldcup2026-skills/
 ├── .claude-plugin/            ← Claude Code plugin metadata
-│   ├── plugin.json            ← Plugin manifest (name, version, description)
-│   └── marketplace.json       ← Marketplace catalog (for /plugin marketplace add)
-├── CLAUDE.md                  ← Use this for Claude Projects
-├── AGENTS.md                  ← Agent definitions
-├── .github/copilot-instructions.md  ← For Copilot
-├── skills/                    ← 6 skill modules (auto-loaded by Claude Code)
+│   ├── plugin.json            ← Plugin manifest
+│   └── marketplace.json       ← Marketplace catalog
+├── .github/
+│   └── copilot-instructions.md  ← GitHub Copilot config
+├── CLAUDE.md                  ← Claude / Claude Projects config
+├── AGENTS.md                  ← Multi-agent definitions
+├── skills/                    ← 6 skill modules (auto-loaded)
 │   ├── team-analysis/SKILL.md
 │   ├── match-prediction/SKILL.md
 │   ├── player-analysis/SKILL.md
@@ -118,69 +157,44 @@ worldcup2026-skills/
 │   ├── models/                ← 5 prediction models
 │   ├── evolution/             ← Self-evolving system
 │   └── memory/                ← Knowledge retention
-├── bin/worldcup-skills.js     ← npx entry
-├── data/                      ← Teams & fixtures (2026 World Cup)
+├── bin/worldcup-skills.js     ← npx / CLI entry
+├── data/                      ← Teams & fixtures ⚠️ sample data
 └── prompts/                   ← System prompts
 ```
 
 ---
 
-## Why No "Plugin Marketplace"?
-
-This project **uses platform-native skill loading**:
-
-| Platform | How It Works | No Adapter Needed |
-|----------|--------------|-------------------|
-| Claude | Reads CLAUDE.md + skills/*.SKILL.md | ✅ Direct |
-| Copilot | Reads .github/copilot-instructions.md + AGENTS.md | ✅ Direct |
-| npx | Executes bin/worldcup-skills.js | ✅ Direct |
-
-**Why?** Each platform has its own native skill/extension system. We don't need translation layers — just provide the right files in the right place.
-
----
-
 ## Troubleshooting
-
-### ❌ "Marketplace file not found at ...\marketplace.json"
-
-**Fix:** The `.claude-plugin/marketplace.json` file is now present. Use the correct install command:
-
-```bash
-/plugin marketplace add ./worldcup2026-skills
-/plugin install worldcup2026-skills@worldcup2026
-```
-
-Or test without installing:
-```bash
-claude --plugin-dir ./worldcup2026-skills
-```
 
 ### ❌ Plugin loads but skills don't appear
 
-**Fix:**
 1. Run `/reload-plugins` inside Claude Code
-2. Verify `skills/*/SKILL.md` files exist
-3. Check: `claude plugin details worldcup2026-skills@worldcup2026`
+2. Verify `skills/*/SKILL.md` files exist in the cloned directory
+3. Re-run: `claude plugins add marketplace https://github.com/worldcup2026/worldcup2026-skills`
 
 ### ❌ Claude Projects doesn't see the skills
 
-**Fix:**
-1. Paste CLAUDE.md into Project Instructions
-2. Restart Claude
-3. Try asking about World Cup predictions
+1. Paste the full `CLAUDE.md` into Project Instructions
+2. Ensure the GitHub repo is connected to the project
+3. Restart the Claude session
 
 ### ❌ Copilot doesn't trigger the agents
 
-**Fix:**
-1. Reload VS Code (Ctrl+Shift+P → "Reload Window")
-2. Ensure `.github/copilot-instructions.md` exists
-3. Try asking about football/World Cup
+1. Reload VS Code (`Ctrl+Shift+P` → "Reload Window")
+2. Confirm `.github/copilot-instructions.md` exists in the workspace root
+3. Ask about football or World Cup predictions to trigger the skill system
+
+### ❌ npx command not found / fails
+
+1. Ensure Node.js ≥ 18.0.0: `node --version`
+2. Use the local clone form: `node bin/worldcup-skills.js predict "..."`
+3. Or install globally: `npm install -g github:worldcup2026/worldcup2026-skills`
 
 ---
 
 ## Support
 
-For installation issues:
-- Validate the plugin: `claude plugin validate .` from the project root
-- Check that all 6 skills exist in `skills/*/SKILL.md`
-- Ensure Node.js ≥ 18.0.0 is installed (for npx)
+- **Repository:** https://github.com/worldcup2026/worldcup2026-skills
+- **Issues:** https://github.com/worldcup2026/worldcup2026-skills/issues
+- Validate the plugin locally: `claude plugin validate .` from the project root
+- Ensure Node.js ≥ 18.0.0 is installed for CLI usage

@@ -29,10 +29,20 @@ EVERY response to an analysis request MUST:
 3. Debate Agent MUST critique every prediction
 4. Confidence must be calibrated — not inflated
 
+## Data Integrity Rules
+
+**Current date: 2026-05-18 | World Cup opens: 2026-06-11**
+
+1. All local data files in this system are labeled `SAMPLE_DATA_UNVERIFIED` — **do not treat them as official data**
+2. All output JSON must include a `data_verification` field
+3. When using local cache, automatically reduce confidence by 30%
+4. User-provided real-time data takes priority over any local cache
+5. **Never present fabricated data as fact** — when uncertain, explicitly state "this data is an estimate and requires further verification"
+
 ## Data
 
-- 48 qualified teams in `data/teams.json`
-- Fixtures in `data/fixtures.json`
+- 48 qualified teams in `data/teams.json` ⚠️ SAMPLE_DATA_UNVERIFIED
+- Fixtures in `data/fixtures.json` ⚠️ SAMPLE_DATA_UNVERIFIED
 - Model weights evolve via `src/evolution/`
 
 ## Tournament Context

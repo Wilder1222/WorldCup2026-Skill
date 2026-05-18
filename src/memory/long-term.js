@@ -45,7 +45,9 @@ function loadTeams() {
     if (_teamsCache) return _teamsCache;
     try {
         const filePath = path.join(__dirname, '../../data/teams.json');
-        _teamsCache = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        // Support both legacy array format and new metadata-wrapped format
+        _teamsCache = Array.isArray(raw) ? raw : (raw.teams || []);
         return _teamsCache;
     } catch {
         return [];
@@ -56,7 +58,9 @@ function loadFixtures() {
     if (_fixturesCache) return _fixturesCache;
     try {
         const filePath = path.join(__dirname, '../../data/fixtures.json');
-        _fixturesCache = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        // Support both legacy array format and new metadata-wrapped format
+        _fixturesCache = Array.isArray(raw) ? raw : (raw.fixtures || []);
         return _fixturesCache;
     } catch {
         return [];

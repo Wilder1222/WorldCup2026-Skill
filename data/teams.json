@@ -1,1305 +1,1314 @@
-[
+{
+  "_metadata": {
+    "last_updated": "2026-05-18",
+    "data_status": "SAMPLE_DATA_UNVERIFIED",
+    "warning": "This file contains estimated/sample data for team ratings, player info, and rankings. It is NOT real-time official data. Any analysis using this data MUST be labeled as 'local cache (unverified)' and confidence must be reduced. Update via official sources (FIFA, Transfermarkt, Opta) before production use.",
+    "required_source": "FIFA official, Transfermarkt, Opta Sports, or equivalent verified sports data provider",
+    "data_cutoff_note": "Current date: 2026-05-18. World Cup opens: 2026-06-11. Use the latest pre-tournament data."
+  },
+  "teams": [
     {
-        "id": "argentina",
-        "name": "Argentina",
-        "group": "A",
-        "elo_rating": 1978,
-        "fifa_ranking": 1,
-        "attack_rating": 92,
-        "defense_rating": 84,
-        "momentum_index": 0.90,
-        "formation": "4-3-3",
-        "tactical_style": "possession",
-        "coach": "Lionel Scaloni",
-        "aliases": [
-            "ARG"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "D",
-            "W",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Lionel Messi",
-                "position": "FW",
-                "age": 38,
-                "club": "Inter Miami",
-                "overall_rating": 91,
-                "form_score": 0.88
-            },
-            {
-                "name": "Julian Alvarez",
-                "position": "FW",
-                "age": 25,
-                "club": "Atletico Madrid",
-                "overall_rating": 87,
-                "form_score": 0.90
-            },
-            {
-                "name": "Rodrigo De Paul",
-                "position": "MF",
-                "age": 30,
-                "club": "Atletico Madrid",
-                "overall_rating": 85,
-                "form_score": 0.82
-            },
-            {
-                "name": "Enzo Fernandez",
-                "position": "MF",
-                "age": 24,
-                "club": "Chelsea",
-                "overall_rating": 84,
-                "form_score": 0.85
-            },
-            {
-                "name": "Emiliano Martinez",
-                "position": "GK",
-                "age": 32,
-                "club": "Aston Villa",
-                "overall_rating": 88,
-                "form_score": 0.86
-            },
-            {
-                "name": "Cristian Romero",
-                "position": "DF",
-                "age": 26,
-                "club": "Tottenham",
-                "overall_rating": 87,
-                "form_score": 0.84
-            }
-        ]
+      "id": "argentina",
+      "name": "Argentina",
+      "group": "A",
+      "elo_rating": 1978,
+      "fifa_ranking": 1,
+      "attack_rating": 92,
+      "defense_rating": 84,
+      "momentum_index": 0.9,
+      "formation": "4-3-3",
+      "tactical_style": "possession",
+      "coach": "Lionel Scaloni",
+      "aliases": [
+        "ARG"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "D",
+        "W",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Lionel Messi",
+          "position": "FW",
+          "age": 38,
+          "club": "Inter Miami",
+          "overall_rating": 91,
+          "form_score": 0.88
+        },
+        {
+          "name": "Julian Alvarez",
+          "position": "FW",
+          "age": 25,
+          "club": "Atletico Madrid",
+          "overall_rating": 87,
+          "form_score": 0.9
+        },
+        {
+          "name": "Rodrigo De Paul",
+          "position": "MF",
+          "age": 30,
+          "club": "Atletico Madrid",
+          "overall_rating": 85,
+          "form_score": 0.82
+        },
+        {
+          "name": "Enzo Fernandez",
+          "position": "MF",
+          "age": 24,
+          "club": "Chelsea",
+          "overall_rating": 84,
+          "form_score": 0.85
+        },
+        {
+          "name": "Emiliano Martinez",
+          "position": "GK",
+          "age": 32,
+          "club": "Aston Villa",
+          "overall_rating": 88,
+          "form_score": 0.86
+        },
+        {
+          "name": "Cristian Romero",
+          "position": "DF",
+          "age": 26,
+          "club": "Tottenham",
+          "overall_rating": 87,
+          "form_score": 0.84
+        }
+      ]
     },
     {
-        "id": "france",
-        "name": "France",
-        "group": "D",
-        "elo_rating": 1975,
-        "fifa_ranking": 2,
-        "attack_rating": 91,
-        "defense_rating": 86,
-        "momentum_index": 0.82,
-        "formation": "4-3-3",
-        "tactical_style": "counter",
-        "coach": "Didier Deschamps",
-        "aliases": [
-            "FRA"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "W",
-            "D",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Kylian Mbappe",
-                "position": "FW",
-                "age": 26,
-                "club": "Real Madrid",
-                "overall_rating": 95,
-                "form_score": 0.92
-            },
-            {
-                "name": "Antoine Griezmann",
-                "position": "FW",
-                "age": 34,
-                "club": "Atletico Madrid",
-                "overall_rating": 86,
-                "form_score": 0.80
-            },
-            {
-                "name": "Aurelien Tchouameni",
-                "position": "MF",
-                "age": 25,
-                "club": "Real Madrid",
-                "overall_rating": 85,
-                "form_score": 0.83
-            },
-            {
-                "name": "William Saliba",
-                "position": "DF",
-                "age": 24,
-                "club": "Arsenal",
-                "overall_rating": 87,
-                "form_score": 0.88
-            },
-            {
-                "name": "Mike Maignan",
-                "position": "GK",
-                "age": 30,
-                "club": "AC Milan",
-                "overall_rating": 87,
-                "form_score": 0.85
-            },
-            {
-                "name": "Marcus Thuram",
-                "position": "FW",
-                "age": 27,
-                "club": "Inter Milan",
-                "overall_rating": 85,
-                "form_score": 0.87
-            }
-        ]
+      "id": "france",
+      "name": "France",
+      "group": "D",
+      "elo_rating": 1975,
+      "fifa_ranking": 2,
+      "attack_rating": 91,
+      "defense_rating": 86,
+      "momentum_index": 0.82,
+      "formation": "4-3-3",
+      "tactical_style": "counter",
+      "coach": "Didier Deschamps",
+      "aliases": [
+        "FRA"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Kylian Mbappe",
+          "position": "FW",
+          "age": 26,
+          "club": "Real Madrid",
+          "overall_rating": 95,
+          "form_score": 0.92
+        },
+        {
+          "name": "Antoine Griezmann",
+          "position": "FW",
+          "age": 34,
+          "club": "Atletico Madrid",
+          "overall_rating": 86,
+          "form_score": 0.8
+        },
+        {
+          "name": "Aurelien Tchouameni",
+          "position": "MF",
+          "age": 25,
+          "club": "Real Madrid",
+          "overall_rating": 85,
+          "form_score": 0.83
+        },
+        {
+          "name": "William Saliba",
+          "position": "DF",
+          "age": 24,
+          "club": "Arsenal",
+          "overall_rating": 87,
+          "form_score": 0.88
+        },
+        {
+          "name": "Mike Maignan",
+          "position": "GK",
+          "age": 30,
+          "club": "AC Milan",
+          "overall_rating": 87,
+          "form_score": 0.85
+        },
+        {
+          "name": "Marcus Thuram",
+          "position": "FW",
+          "age": 27,
+          "club": "Inter Milan",
+          "overall_rating": 85,
+          "form_score": 0.87
+        }
+      ]
     },
     {
-        "id": "brazil",
-        "name": "Brazil",
-        "group": "B",
-        "elo_rating": 1960,
-        "fifa_ranking": 3,
-        "attack_rating": 89,
-        "defense_rating": 83,
-        "momentum_index": 0.78,
-        "formation": "4-2-3-1",
-        "tactical_style": "possession",
-        "coach": "Dorival Junior",
-        "aliases": [
-            "BRA"
-        ],
-        "recent_results": [
-            "W",
-            "D",
-            "W",
-            "W",
-            "D"
-        ],
-        "squad": [
-            {
-                "name": "Vinicius Jr",
-                "position": "FW",
-                "age": 24,
-                "club": "Real Madrid",
-                "overall_rating": 93,
-                "form_score": 0.91
-            },
-            {
-                "name": "Rodrygo",
-                "position": "FW",
-                "age": 24,
-                "club": "Real Madrid",
-                "overall_rating": 86,
-                "form_score": 0.85
-            },
-            {
-                "name": "Endrick",
-                "position": "FW",
-                "age": 18,
-                "club": "Real Madrid",
-                "overall_rating": 80,
-                "form_score": 0.78
-            },
-            {
-                "name": "Bruno Guimaraes",
-                "position": "MF",
-                "age": 27,
-                "club": "Newcastle",
-                "overall_rating": 87,
-                "form_score": 0.85
-            },
-            {
-                "name": "Casemiro",
-                "position": "MF",
-                "age": 33,
-                "club": "Manchester United",
-                "overall_rating": 84,
-                "form_score": 0.77
-            },
-            {
-                "name": "Marquinhos",
-                "position": "DF",
-                "age": 30,
-                "club": "PSG",
-                "overall_rating": 86,
-                "form_score": 0.84
-            }
-        ]
+      "id": "brazil",
+      "name": "Brazil",
+      "group": "B",
+      "elo_rating": 1960,
+      "fifa_ranking": 3,
+      "attack_rating": 89,
+      "defense_rating": 83,
+      "momentum_index": 0.78,
+      "formation": "4-2-3-1",
+      "tactical_style": "possession",
+      "coach": "Dorival Junior",
+      "aliases": [
+        "BRA"
+      ],
+      "recent_results": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "D"
+      ],
+      "squad": [
+        {
+          "name": "Vinicius Jr",
+          "position": "FW",
+          "age": 24,
+          "club": "Real Madrid",
+          "overall_rating": 93,
+          "form_score": 0.91
+        },
+        {
+          "name": "Rodrygo",
+          "position": "FW",
+          "age": 24,
+          "club": "Real Madrid",
+          "overall_rating": 86,
+          "form_score": 0.85
+        },
+        {
+          "name": "Endrick",
+          "position": "FW",
+          "age": 18,
+          "club": "Real Madrid",
+          "overall_rating": 80,
+          "form_score": 0.78
+        },
+        {
+          "name": "Bruno Guimaraes",
+          "position": "MF",
+          "age": 27,
+          "club": "Newcastle",
+          "overall_rating": 87,
+          "form_score": 0.85
+        },
+        {
+          "name": "Casemiro",
+          "position": "MF",
+          "age": 33,
+          "club": "Manchester United",
+          "overall_rating": 84,
+          "form_score": 0.77
+        },
+        {
+          "name": "Marquinhos",
+          "position": "DF",
+          "age": 30,
+          "club": "PSG",
+          "overall_rating": 86,
+          "form_score": 0.84
+        }
+      ]
     },
     {
-        "id": "england",
-        "name": "England",
-        "group": "C",
-        "elo_rating": 1940,
-        "fifa_ranking": 4,
-        "attack_rating": 88,
-        "defense_rating": 85,
-        "momentum_index": 0.76,
-        "formation": "4-3-3",
-        "tactical_style": "pressing",
-        "coach": "Thomas Tuchel",
-        "aliases": [
-            "ENG"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "D",
-            "W",
-            "L"
-        ],
-        "squad": [
-            {
-                "name": "Jude Bellingham",
-                "position": "MF",
-                "age": 21,
-                "club": "Real Madrid",
-                "overall_rating": 91,
-                "form_score": 0.90
-            },
-            {
-                "name": "Harry Kane",
-                "position": "FW",
-                "age": 31,
-                "club": "Bayern Munich",
-                "overall_rating": 90,
-                "form_score": 0.88
-            },
-            {
-                "name": "Phil Foden",
-                "position": "MF",
-                "age": 25,
-                "club": "Manchester City",
-                "overall_rating": 89,
-                "form_score": 0.87
-            },
-            {
-                "name": "Bukayo Saka",
-                "position": "FW",
-                "age": 24,
-                "club": "Arsenal",
-                "overall_rating": 88,
-                "form_score": 0.89
-            },
-            {
-                "name": "Declan Rice",
-                "position": "MF",
-                "age": 26,
-                "club": "Arsenal",
-                "overall_rating": 87,
-                "form_score": 0.86
-            },
-            {
-                "name": "Jordan Pickford",
-                "position": "GK",
-                "age": 31,
-                "club": "Everton",
-                "overall_rating": 83,
-                "form_score": 0.80
-            }
-        ]
+      "id": "england",
+      "name": "England",
+      "group": "C",
+      "elo_rating": 1940,
+      "fifa_ranking": 4,
+      "attack_rating": 88,
+      "defense_rating": 85,
+      "momentum_index": 0.76,
+      "formation": "4-3-3",
+      "tactical_style": "pressing",
+      "coach": "Thomas Tuchel",
+      "aliases": [
+        "ENG"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "D",
+        "W",
+        "L"
+      ],
+      "squad": [
+        {
+          "name": "Jude Bellingham",
+          "position": "MF",
+          "age": 21,
+          "club": "Real Madrid",
+          "overall_rating": 91,
+          "form_score": 0.9
+        },
+        {
+          "name": "Harry Kane",
+          "position": "FW",
+          "age": 31,
+          "club": "Bayern Munich",
+          "overall_rating": 90,
+          "form_score": 0.88
+        },
+        {
+          "name": "Phil Foden",
+          "position": "MF",
+          "age": 25,
+          "club": "Manchester City",
+          "overall_rating": 89,
+          "form_score": 0.87
+        },
+        {
+          "name": "Bukayo Saka",
+          "position": "FW",
+          "age": 24,
+          "club": "Arsenal",
+          "overall_rating": 88,
+          "form_score": 0.89
+        },
+        {
+          "name": "Declan Rice",
+          "position": "MF",
+          "age": 26,
+          "club": "Arsenal",
+          "overall_rating": 87,
+          "form_score": 0.86
+        },
+        {
+          "name": "Jordan Pickford",
+          "position": "GK",
+          "age": 31,
+          "club": "Everton",
+          "overall_rating": 83,
+          "form_score": 0.8
+        }
+      ]
     },
     {
-        "id": "spain",
-        "name": "Spain",
-        "group": "E",
-        "elo_rating": 1955,
-        "fifa_ranking": 3,
-        "attack_rating": 90,
-        "defense_rating": 87,
-        "momentum_index": 0.88,
-        "formation": "4-3-3",
-        "tactical_style": "possession",
-        "coach": "Luis de la Fuente",
-        "aliases": [
-            "ESP"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "W",
-            "W",
-            "D"
-        ],
-        "squad": [
-            {
-                "name": "Lamine Yamal",
-                "position": "FW",
-                "age": 17,
-                "club": "Barcelona",
-                "overall_rating": 88,
-                "form_score": 0.92
-            },
-            {
-                "name": "Pedri",
-                "position": "MF",
-                "age": 22,
-                "club": "Barcelona",
-                "overall_rating": 88,
-                "form_score": 0.85
-            },
-            {
-                "name": "Rodri",
-                "position": "MF",
-                "age": 28,
-                "club": "Manchester City",
-                "overall_rating": 92,
-                "form_score": 0.89
-            },
-            {
-                "name": "Alvaro Morata",
-                "position": "FW",
-                "age": 32,
-                "club": "Atletico Madrid",
-                "overall_rating": 83,
-                "form_score": 0.79
-            },
-            {
-                "name": "Nico Williams",
-                "position": "FW",
-                "age": 22,
-                "club": "Athletic Bilbao",
-                "overall_rating": 86,
-                "form_score": 0.88
-            },
-            {
-                "name": "Unai Simon",
-                "position": "GK",
-                "age": 27,
-                "club": "Athletic Bilbao",
-                "overall_rating": 85,
-                "form_score": 0.83
-            }
-        ]
+      "id": "spain",
+      "name": "Spain",
+      "group": "E",
+      "elo_rating": 1955,
+      "fifa_ranking": 3,
+      "attack_rating": 90,
+      "defense_rating": 87,
+      "momentum_index": 0.88,
+      "formation": "4-3-3",
+      "tactical_style": "possession",
+      "coach": "Luis de la Fuente",
+      "aliases": [
+        "ESP"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "D"
+      ],
+      "squad": [
+        {
+          "name": "Lamine Yamal",
+          "position": "FW",
+          "age": 17,
+          "club": "Barcelona",
+          "overall_rating": 88,
+          "form_score": 0.92
+        },
+        {
+          "name": "Pedri",
+          "position": "MF",
+          "age": 22,
+          "club": "Barcelona",
+          "overall_rating": 88,
+          "form_score": 0.85
+        },
+        {
+          "name": "Rodri",
+          "position": "MF",
+          "age": 28,
+          "club": "Manchester City",
+          "overall_rating": 92,
+          "form_score": 0.89
+        },
+        {
+          "name": "Alvaro Morata",
+          "position": "FW",
+          "age": 32,
+          "club": "Atletico Madrid",
+          "overall_rating": 83,
+          "form_score": 0.79
+        },
+        {
+          "name": "Nico Williams",
+          "position": "FW",
+          "age": 22,
+          "club": "Athletic Bilbao",
+          "overall_rating": 86,
+          "form_score": 0.88
+        },
+        {
+          "name": "Unai Simon",
+          "position": "GK",
+          "age": 27,
+          "club": "Athletic Bilbao",
+          "overall_rating": 85,
+          "form_score": 0.83
+        }
+      ]
     },
     {
-        "id": "germany",
-        "name": "Germany",
-        "group": "F",
-        "elo_rating": 1935,
-        "fifa_ranking": 5,
-        "attack_rating": 87,
-        "defense_rating": 84,
-        "momentum_index": 0.80,
-        "formation": "4-2-3-1",
-        "tactical_style": "pressing",
-        "coach": "Julian Nagelsmann",
-        "aliases": [
-            "GER"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "W",
-            "D",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Florian Wirtz",
-                "position": "MF",
-                "age": 21,
-                "club": "Bayer Leverkusen",
-                "overall_rating": 89,
-                "form_score": 0.91
-            },
-            {
-                "name": "Jamal Musiala",
-                "position": "MF",
-                "age": 21,
-                "club": "Bayern Munich",
-                "overall_rating": 88,
-                "form_score": 0.89
-            },
-            {
-                "name": "Kai Havertz",
-                "position": "FW",
-                "age": 25,
-                "club": "Arsenal",
-                "overall_rating": 85,
-                "form_score": 0.84
-            },
-            {
-                "name": "Manuel Neuer",
-                "position": "GK",
-                "age": 39,
-                "club": "Bayern Munich",
-                "overall_rating": 85,
-                "form_score": 0.80
-            },
-            {
-                "name": "Joshua Kimmich",
-                "position": "DF",
-                "age": 30,
-                "club": "Bayern Munich",
-                "overall_rating": 88,
-                "form_score": 0.86
-            },
-            {
-                "name": "Leroy Sane",
-                "position": "FW",
-                "age": 30,
-                "club": "Bayern Munich",
-                "overall_rating": 85,
-                "form_score": 0.82
-            }
-        ]
+      "id": "germany",
+      "name": "Germany",
+      "group": "F",
+      "elo_rating": 1935,
+      "fifa_ranking": 5,
+      "attack_rating": 87,
+      "defense_rating": 84,
+      "momentum_index": 0.8,
+      "formation": "4-2-3-1",
+      "tactical_style": "pressing",
+      "coach": "Julian Nagelsmann",
+      "aliases": [
+        "GER"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Florian Wirtz",
+          "position": "MF",
+          "age": 21,
+          "club": "Bayer Leverkusen",
+          "overall_rating": 89,
+          "form_score": 0.91
+        },
+        {
+          "name": "Jamal Musiala",
+          "position": "MF",
+          "age": 21,
+          "club": "Bayern Munich",
+          "overall_rating": 88,
+          "form_score": 0.89
+        },
+        {
+          "name": "Kai Havertz",
+          "position": "FW",
+          "age": 25,
+          "club": "Arsenal",
+          "overall_rating": 85,
+          "form_score": 0.84
+        },
+        {
+          "name": "Manuel Neuer",
+          "position": "GK",
+          "age": 39,
+          "club": "Bayern Munich",
+          "overall_rating": 85,
+          "form_score": 0.8
+        },
+        {
+          "name": "Joshua Kimmich",
+          "position": "DF",
+          "age": 30,
+          "club": "Bayern Munich",
+          "overall_rating": 88,
+          "form_score": 0.86
+        },
+        {
+          "name": "Leroy Sane",
+          "position": "FW",
+          "age": 30,
+          "club": "Bayern Munich",
+          "overall_rating": 85,
+          "form_score": 0.82
+        }
+      ]
     },
     {
-        "id": "portugal",
-        "name": "Portugal",
-        "group": "G",
-        "elo_rating": 1920,
-        "fifa_ranking": 6,
-        "attack_rating": 88,
-        "defense_rating": 82,
-        "momentum_index": 0.84,
-        "formation": "4-3-3",
-        "tactical_style": "counter",
-        "coach": "Roberto Martinez",
-        "aliases": [
-            "POR"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "W",
-            "W",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Cristiano Ronaldo",
-                "position": "FW",
-                "age": 41,
-                "club": "Al Nassr",
-                "overall_rating": 85,
-                "form_score": 0.82
-            },
-            {
-                "name": "Bruno Fernandes",
-                "position": "MF",
-                "age": 31,
-                "club": "Manchester United",
-                "overall_rating": 86,
-                "form_score": 0.85
-            },
-            {
-                "name": "Rafael Leao",
-                "position": "FW",
-                "age": 25,
-                "club": "AC Milan",
-                "overall_rating": 86,
-                "form_score": 0.84
-            },
-            {
-                "name": "Ruben Dias",
-                "position": "DF",
-                "age": 27,
-                "club": "Manchester City",
-                "overall_rating": 89,
-                "form_score": 0.87
-            },
-            {
-                "name": "Joao Felix",
-                "position": "FW",
-                "age": 26,
-                "club": "Barcelona",
-                "overall_rating": 84,
-                "form_score": 0.80
-            }
-        ]
+      "id": "portugal",
+      "name": "Portugal",
+      "group": "G",
+      "elo_rating": 1920,
+      "fifa_ranking": 6,
+      "attack_rating": 88,
+      "defense_rating": 82,
+      "momentum_index": 0.84,
+      "formation": "4-3-3",
+      "tactical_style": "counter",
+      "coach": "Roberto Martinez",
+      "aliases": [
+        "POR"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Cristiano Ronaldo",
+          "position": "FW",
+          "age": 41,
+          "club": "Al Nassr",
+          "overall_rating": 85,
+          "form_score": 0.82
+        },
+        {
+          "name": "Bruno Fernandes",
+          "position": "MF",
+          "age": 31,
+          "club": "Manchester United",
+          "overall_rating": 86,
+          "form_score": 0.85
+        },
+        {
+          "name": "Rafael Leao",
+          "position": "FW",
+          "age": 25,
+          "club": "AC Milan",
+          "overall_rating": 86,
+          "form_score": 0.84
+        },
+        {
+          "name": "Ruben Dias",
+          "position": "DF",
+          "age": 27,
+          "club": "Manchester City",
+          "overall_rating": 89,
+          "form_score": 0.87
+        },
+        {
+          "name": "Joao Felix",
+          "position": "FW",
+          "age": 26,
+          "club": "Barcelona",
+          "overall_rating": 84,
+          "form_score": 0.8
+        }
+      ]
     },
     {
-        "id": "netherlands",
-        "name": "Netherlands",
-        "group": "H",
-        "elo_rating": 1900,
-        "fifa_ranking": 7,
-        "attack_rating": 86,
-        "defense_rating": 83,
-        "momentum_index": 0.75,
-        "formation": "4-3-3",
-        "tactical_style": "pressing",
-        "coach": "Ronald Koeman",
-        "aliases": [
-            "NED",
-            "Holland"
-        ],
-        "recent_results": [
-            "W",
-            "D",
-            "W",
-            "W",
-            "L"
-        ],
-        "squad": [
-            {
-                "name": "Virgil van Dijk",
-                "position": "DF",
-                "age": 34,
-                "club": "Liverpool",
-                "overall_rating": 88,
-                "form_score": 0.83
-            },
-            {
-                "name": "Cody Gakpo",
-                "position": "FW",
-                "age": 25,
-                "club": "Liverpool",
-                "overall_rating": 84,
-                "form_score": 0.85
-            },
-            {
-                "name": "Xavi Simons",
-                "position": "MF",
-                "age": 22,
-                "club": "RB Leipzig",
-                "overall_rating": 83,
-                "form_score": 0.82
-            },
-            {
-                "name": "Tijjani Reijnders",
-                "position": "MF",
-                "age": 26,
-                "club": "AC Milan",
-                "overall_rating": 82,
-                "form_score": 0.83
-            }
-        ]
+      "id": "netherlands",
+      "name": "Netherlands",
+      "group": "H",
+      "elo_rating": 1900,
+      "fifa_ranking": 7,
+      "attack_rating": 86,
+      "defense_rating": 83,
+      "momentum_index": 0.75,
+      "formation": "4-3-3",
+      "tactical_style": "pressing",
+      "coach": "Ronald Koeman",
+      "aliases": [
+        "NED",
+        "Holland"
+      ],
+      "recent_results": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "L"
+      ],
+      "squad": [
+        {
+          "name": "Virgil van Dijk",
+          "position": "DF",
+          "age": 34,
+          "club": "Liverpool",
+          "overall_rating": 88,
+          "form_score": 0.83
+        },
+        {
+          "name": "Cody Gakpo",
+          "position": "FW",
+          "age": 25,
+          "club": "Liverpool",
+          "overall_rating": 84,
+          "form_score": 0.85
+        },
+        {
+          "name": "Xavi Simons",
+          "position": "MF",
+          "age": 22,
+          "club": "RB Leipzig",
+          "overall_rating": 83,
+          "form_score": 0.82
+        },
+        {
+          "name": "Tijjani Reijnders",
+          "position": "MF",
+          "age": 26,
+          "club": "AC Milan",
+          "overall_rating": 82,
+          "form_score": 0.83
+        }
+      ]
     },
     {
-        "id": "morocco",
-        "name": "Morocco",
-        "group": "I",
-        "elo_rating": 1865,
-        "fifa_ranking": 14,
-        "attack_rating": 78,
-        "defense_rating": 85,
-        "momentum_index": 0.82,
-        "formation": "4-1-4-1",
-        "tactical_style": "counter",
-        "coach": "Walid Regragui",
-        "aliases": [
-            "MAR"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "D",
-            "W",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Achraf Hakimi",
-                "position": "DF",
-                "age": 26,
-                "club": "PSG",
-                "overall_rating": 87,
-                "form_score": 0.86
-            },
-            {
-                "name": "Hakim Ziyech",
-                "position": "FW",
-                "age": 32,
-                "club": "Galatasaray",
-                "overall_rating": 82,
-                "form_score": 0.78
-            },
-            {
-                "name": "Yassine Bounou",
-                "position": "GK",
-                "age": 32,
-                "club": "Sevilla",
-                "overall_rating": 86,
-                "form_score": 0.82
-            }
-        ]
+      "id": "morocco",
+      "name": "Morocco",
+      "group": "I",
+      "elo_rating": 1865,
+      "fifa_ranking": 14,
+      "attack_rating": 78,
+      "defense_rating": 85,
+      "momentum_index": 0.82,
+      "formation": "4-1-4-1",
+      "tactical_style": "counter",
+      "coach": "Walid Regragui",
+      "aliases": [
+        "MAR"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "D",
+        "W",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Achraf Hakimi",
+          "position": "DF",
+          "age": 26,
+          "club": "PSG",
+          "overall_rating": 87,
+          "form_score": 0.86
+        },
+        {
+          "name": "Hakim Ziyech",
+          "position": "FW",
+          "age": 32,
+          "club": "Galatasaray",
+          "overall_rating": 82,
+          "form_score": 0.78
+        },
+        {
+          "name": "Yassine Bounou",
+          "position": "GK",
+          "age": 32,
+          "club": "Sevilla",
+          "overall_rating": 86,
+          "form_score": 0.82
+        }
+      ]
     },
     {
-        "id": "usa",
-        "name": "United States",
-        "group": "A",
-        "elo_rating": 1820,
-        "fifa_ranking": 11,
-        "attack_rating": 76,
-        "defense_rating": 78,
-        "momentum_index": 0.72,
-        "formation": "4-3-3",
-        "tactical_style": "pressing",
-        "coach": "Mauricio Pochettino",
-        "aliases": [
-            "USA",
-            "US",
-            "United States of America"
-        ],
-        "recent_results": [
-            "W",
-            "D",
-            "W",
-            "L",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Christian Pulisic",
-                "position": "FW",
-                "age": 27,
-                "club": "AC Milan",
-                "overall_rating": 82,
-                "form_score": 0.83
-            },
-            {
-                "name": "Tyler Adams",
-                "position": "MF",
-                "age": 26,
-                "club": "Bournemouth",
-                "overall_rating": 79,
-                "form_score": 0.77
-            }
-        ]
+      "id": "usa",
+      "name": "United States",
+      "group": "A",
+      "elo_rating": 1820,
+      "fifa_ranking": 11,
+      "attack_rating": 76,
+      "defense_rating": 78,
+      "momentum_index": 0.72,
+      "formation": "4-3-3",
+      "tactical_style": "pressing",
+      "coach": "Mauricio Pochettino",
+      "aliases": [
+        "USA",
+        "US",
+        "United States of America"
+      ],
+      "recent_results": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Christian Pulisic",
+          "position": "FW",
+          "age": 27,
+          "club": "AC Milan",
+          "overall_rating": 82,
+          "form_score": 0.83
+        },
+        {
+          "name": "Tyler Adams",
+          "position": "MF",
+          "age": 26,
+          "club": "Bournemouth",
+          "overall_rating": 79,
+          "form_score": 0.77
+        }
+      ]
     },
     {
-        "id": "canada",
-        "name": "Canada",
-        "group": "B",
-        "elo_rating": 1790,
-        "fifa_ranking": 47,
-        "attack_rating": 72,
-        "defense_rating": 74,
-        "momentum_index": 0.65,
-        "formation": "4-4-2",
-        "tactical_style": "pressing",
-        "coach": "Jesse Marsch",
-        "aliases": [
-            "CAN"
-        ],
-        "recent_results": [
-            "L",
-            "W",
-            "D",
-            "W",
-            "L"
-        ],
-        "squad": [
-            {
-                "name": "Alphonso Davies",
-                "position": "DF",
-                "age": 25,
-                "club": "Bayern Munich",
-                "overall_rating": 84,
-                "form_score": 0.81
-            },
-            {
-                "name": "Jonathan David",
-                "position": "FW",
-                "age": 24,
-                "club": "Lille",
-                "overall_rating": 82,
-                "form_score": 0.83
-            }
-        ]
+      "id": "canada",
+      "name": "Canada",
+      "group": "B",
+      "elo_rating": 1790,
+      "fifa_ranking": 47,
+      "attack_rating": 72,
+      "defense_rating": 74,
+      "momentum_index": 0.65,
+      "formation": "4-4-2",
+      "tactical_style": "pressing",
+      "coach": "Jesse Marsch",
+      "aliases": [
+        "CAN"
+      ],
+      "recent_results": [
+        "L",
+        "W",
+        "D",
+        "W",
+        "L"
+      ],
+      "squad": [
+        {
+          "name": "Alphonso Davies",
+          "position": "DF",
+          "age": 25,
+          "club": "Bayern Munich",
+          "overall_rating": 84,
+          "form_score": 0.81
+        },
+        {
+          "name": "Jonathan David",
+          "position": "FW",
+          "age": 24,
+          "club": "Lille",
+          "overall_rating": 82,
+          "form_score": 0.83
+        }
+      ]
     },
     {
-        "id": "mexico",
-        "name": "Mexico",
-        "group": "C",
-        "elo_rating": 1850,
-        "fifa_ranking": 15,
-        "attack_rating": 79,
-        "defense_rating": 80,
-        "momentum_index": 0.70,
-        "formation": "4-3-3",
-        "tactical_style": "counter",
-        "coach": "Javier Aguirre",
-        "aliases": [
-            "MEX"
-        ],
-        "recent_results": [
-            "W",
-            "D",
-            "L",
-            "W",
-            "D"
-        ],
-        "squad": [
-            {
-                "name": "Santiago Gimenez",
-                "position": "FW",
-                "age": 23,
-                "club": "AC Milan",
-                "overall_rating": 83,
-                "form_score": 0.85
-            },
-            {
-                "name": "Hirving Lozano",
-                "position": "FW",
-                "age": 30,
-                "club": "PSV",
-                "overall_rating": 81,
-                "form_score": 0.77
-            }
-        ]
+      "id": "mexico",
+      "name": "Mexico",
+      "group": "C",
+      "elo_rating": 1850,
+      "fifa_ranking": 15,
+      "attack_rating": 79,
+      "defense_rating": 80,
+      "momentum_index": 0.7,
+      "formation": "4-3-3",
+      "tactical_style": "counter",
+      "coach": "Javier Aguirre",
+      "aliases": [
+        "MEX"
+      ],
+      "recent_results": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "D"
+      ],
+      "squad": [
+        {
+          "name": "Santiago Gimenez",
+          "position": "FW",
+          "age": 23,
+          "club": "AC Milan",
+          "overall_rating": 83,
+          "form_score": 0.85
+        },
+        {
+          "name": "Hirving Lozano",
+          "position": "FW",
+          "age": 30,
+          "club": "PSV",
+          "overall_rating": 81,
+          "form_score": 0.77
+        }
+      ]
     },
     {
-        "id": "japan",
-        "name": "Japan",
-        "group": "D",
-        "elo_rating": 1860,
-        "fifa_ranking": 13,
-        "attack_rating": 80,
-        "defense_rating": 79,
-        "momentum_index": 0.80,
-        "formation": "4-2-3-1",
-        "tactical_style": "pressing",
-        "coach": "Hajime Moriyasu",
-        "aliases": [
-            "JPN"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "W",
-            "D",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Takefusa Kubo",
-                "position": "FW",
-                "age": 23,
-                "club": "Real Sociedad",
-                "overall_rating": 82,
-                "form_score": 0.84
-            },
-            {
-                "name": "Kaoru Mitoma",
-                "position": "FW",
-                "age": 27,
-                "club": "Brighton",
-                "overall_rating": 82,
-                "form_score": 0.83
-            }
-        ]
+      "id": "japan",
+      "name": "Japan",
+      "group": "D",
+      "elo_rating": 1860,
+      "fifa_ranking": 13,
+      "attack_rating": 80,
+      "defense_rating": 79,
+      "momentum_index": 0.8,
+      "formation": "4-2-3-1",
+      "tactical_style": "pressing",
+      "coach": "Hajime Moriyasu",
+      "aliases": [
+        "JPN"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Takefusa Kubo",
+          "position": "FW",
+          "age": 23,
+          "club": "Real Sociedad",
+          "overall_rating": 82,
+          "form_score": 0.84
+        },
+        {
+          "name": "Kaoru Mitoma",
+          "position": "FW",
+          "age": 27,
+          "club": "Brighton",
+          "overall_rating": 82,
+          "form_score": 0.83
+        }
+      ]
     },
     {
-        "id": "south-korea",
-        "name": "South Korea",
-        "group": "E",
-        "elo_rating": 1810,
-        "fifa_ranking": 22,
-        "attack_rating": 77,
-        "defense_rating": 76,
-        "momentum_index": 0.72,
-        "formation": "4-2-3-1",
-        "tactical_style": "counter",
-        "coach": "Hong Myung-bo",
-        "aliases": [
-            "KOR",
-            "Korea"
-        ],
-        "recent_results": [
-            "W",
-            "D",
-            "W",
-            "L",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Son Heung-min",
-                "position": "FW",
-                "age": 33,
-                "club": "Tottenham",
-                "overall_rating": 86,
-                "form_score": 0.82
-            },
-            {
-                "name": "Lee Kang-in",
-                "position": "MF",
-                "age": 23,
-                "club": "PSG",
-                "overall_rating": 80,
-                "form_score": 0.81
-            }
-        ]
+      "id": "south-korea",
+      "name": "South Korea",
+      "group": "E",
+      "elo_rating": 1810,
+      "fifa_ranking": 22,
+      "attack_rating": 77,
+      "defense_rating": 76,
+      "momentum_index": 0.72,
+      "formation": "4-2-3-1",
+      "tactical_style": "counter",
+      "coach": "Hong Myung-bo",
+      "aliases": [
+        "KOR",
+        "Korea"
+      ],
+      "recent_results": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Son Heung-min",
+          "position": "FW",
+          "age": 33,
+          "club": "Tottenham",
+          "overall_rating": 86,
+          "form_score": 0.82
+        },
+        {
+          "name": "Lee Kang-in",
+          "position": "MF",
+          "age": 23,
+          "club": "PSG",
+          "overall_rating": 80,
+          "form_score": 0.81
+        }
+      ]
     },
     {
-        "id": "senegal",
-        "name": "Senegal",
-        "group": "F",
-        "elo_rating": 1835,
-        "fifa_ranking": 17,
-        "attack_rating": 79,
-        "defense_rating": 78,
-        "momentum_index": 0.76,
-        "formation": "4-3-3",
-        "tactical_style": "counter",
-        "coach": "Aliou Cisse",
-        "aliases": [
-            "SEN"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "D",
-            "W",
-            "L"
-        ],
-        "squad": [
-            {
-                "name": "Sadio Mane",
-                "position": "FW",
-                "age": 33,
-                "club": "Al-Nassr",
-                "overall_rating": 85,
-                "form_score": 0.78
-            },
-            {
-                "name": "Edouard Mendy",
-                "position": "GK",
-                "age": 32,
-                "club": "Al-Ahli",
-                "overall_rating": 84,
-                "form_score": 0.79
-            }
-        ]
+      "id": "senegal",
+      "name": "Senegal",
+      "group": "F",
+      "elo_rating": 1835,
+      "fifa_ranking": 17,
+      "attack_rating": 79,
+      "defense_rating": 78,
+      "momentum_index": 0.76,
+      "formation": "4-3-3",
+      "tactical_style": "counter",
+      "coach": "Aliou Cisse",
+      "aliases": [
+        "SEN"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "D",
+        "W",
+        "L"
+      ],
+      "squad": [
+        {
+          "name": "Sadio Mane",
+          "position": "FW",
+          "age": 33,
+          "club": "Al-Nassr",
+          "overall_rating": 85,
+          "form_score": 0.78
+        },
+        {
+          "name": "Edouard Mendy",
+          "position": "GK",
+          "age": 32,
+          "club": "Al-Ahli",
+          "overall_rating": 84,
+          "form_score": 0.79
+        }
+      ]
     },
     {
-        "id": "uruguay",
-        "name": "Uruguay",
-        "group": "G",
-        "elo_rating": 1880,
-        "fifa_ranking": 18,
-        "attack_rating": 82,
-        "defense_rating": 83,
-        "momentum_index": 0.78,
-        "formation": "4-4-2",
-        "tactical_style": "counter",
-        "coach": "Marcelo Bielsa",
-        "aliases": [
-            "URU"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "D",
-            "W",
-            "D"
-        ],
-        "squad": [
-            {
-                "name": "Darwin Nunez",
-                "position": "FW",
-                "age": 25,
-                "club": "Liverpool",
-                "overall_rating": 84,
-                "form_score": 0.82
-            },
-            {
-                "name": "Federico Valverde",
-                "position": "MF",
-                "age": 25,
-                "club": "Real Madrid",
-                "overall_rating": 87,
-                "form_score": 0.87
-            },
-            {
-                "name": "Ronald Araujo",
-                "position": "DF",
-                "age": 25,
-                "club": "Barcelona",
-                "overall_rating": 87,
-                "form_score": 0.84
-            }
-        ]
+      "id": "uruguay",
+      "name": "Uruguay",
+      "group": "G",
+      "elo_rating": 1880,
+      "fifa_ranking": 18,
+      "attack_rating": 82,
+      "defense_rating": 83,
+      "momentum_index": 0.78,
+      "formation": "4-4-2",
+      "tactical_style": "counter",
+      "coach": "Marcelo Bielsa",
+      "aliases": [
+        "URU"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "D",
+        "W",
+        "D"
+      ],
+      "squad": [
+        {
+          "name": "Darwin Nunez",
+          "position": "FW",
+          "age": 25,
+          "club": "Liverpool",
+          "overall_rating": 84,
+          "form_score": 0.82
+        },
+        {
+          "name": "Federico Valverde",
+          "position": "MF",
+          "age": 25,
+          "club": "Real Madrid",
+          "overall_rating": 87,
+          "form_score": 0.87
+        },
+        {
+          "name": "Ronald Araujo",
+          "position": "DF",
+          "age": 25,
+          "club": "Barcelona",
+          "overall_rating": 87,
+          "form_score": 0.84
+        }
+      ]
     },
     {
-        "id": "colombia",
-        "name": "Colombia",
-        "group": "H",
-        "elo_rating": 1890,
-        "fifa_ranking": 9,
-        "attack_rating": 83,
-        "defense_rating": 80,
-        "momentum_index": 0.82,
-        "formation": "4-3-3",
-        "tactical_style": "possession",
-        "coach": "Nestor Lorenzo",
-        "aliases": [
-            "COL"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "W",
-            "D",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "James Rodriguez",
-                "position": "MF",
-                "age": 33,
-                "club": "Rayo Vallecano",
-                "overall_rating": 82,
-                "form_score": 0.78
-            },
-            {
-                "name": "Luis Diaz",
-                "position": "FW",
-                "age": 27,
-                "club": "Liverpool",
-                "overall_rating": 86,
-                "form_score": 0.87
-            },
-            {
-                "name": "Jhon Duran",
-                "position": "FW",
-                "age": 20,
-                "club": "Aston Villa",
-                "overall_rating": 80,
-                "form_score": 0.83
-            }
-        ]
+      "id": "colombia",
+      "name": "Colombia",
+      "group": "H",
+      "elo_rating": 1890,
+      "fifa_ranking": 9,
+      "attack_rating": 83,
+      "defense_rating": 80,
+      "momentum_index": 0.82,
+      "formation": "4-3-3",
+      "tactical_style": "possession",
+      "coach": "Nestor Lorenzo",
+      "aliases": [
+        "COL"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "James Rodriguez",
+          "position": "MF",
+          "age": 33,
+          "club": "Rayo Vallecano",
+          "overall_rating": 82,
+          "form_score": 0.78
+        },
+        {
+          "name": "Luis Diaz",
+          "position": "FW",
+          "age": 27,
+          "club": "Liverpool",
+          "overall_rating": 86,
+          "form_score": 0.87
+        },
+        {
+          "name": "Jhon Duran",
+          "position": "FW",
+          "age": 20,
+          "club": "Aston Villa",
+          "overall_rating": 80,
+          "form_score": 0.83
+        }
+      ]
     },
     {
-        "id": "italy",
-        "name": "Italy",
-        "group": "I",
-        "elo_rating": 1895,
-        "fifa_ranking": 8,
-        "attack_rating": 83,
-        "defense_rating": 86,
-        "momentum_index": 0.74,
-        "formation": "3-5-2",
-        "tactical_style": "possession",
-        "coach": "Luciano Spalletti",
-        "aliases": [
-            "ITA"
-        ],
-        "recent_results": [
-            "D",
-            "W",
-            "D",
-            "W",
-            "L"
-        ],
-        "squad": [
-            {
-                "name": "Federico Chiesa",
-                "position": "FW",
-                "age": 27,
-                "club": "Liverpool",
-                "overall_rating": 84,
-                "form_score": 0.79
-            },
-            {
-                "name": "Sandro Tonali",
-                "position": "MF",
-                "age": 24,
-                "club": "Newcastle",
-                "overall_rating": 83,
-                "form_score": 0.82
-            },
-            {
-                "name": "Gianluigi Donnarumma",
-                "position": "GK",
-                "age": 26,
-                "club": "PSG",
-                "overall_rating": 90,
-                "form_score": 0.86
-            }
-        ]
+      "id": "italy",
+      "name": "Italy",
+      "group": "I",
+      "elo_rating": 1895,
+      "fifa_ranking": 8,
+      "attack_rating": 83,
+      "defense_rating": 86,
+      "momentum_index": 0.74,
+      "formation": "3-5-2",
+      "tactical_style": "possession",
+      "coach": "Luciano Spalletti",
+      "aliases": [
+        "ITA"
+      ],
+      "recent_results": [
+        "D",
+        "W",
+        "D",
+        "W",
+        "L"
+      ],
+      "squad": [
+        {
+          "name": "Federico Chiesa",
+          "position": "FW",
+          "age": 27,
+          "club": "Liverpool",
+          "overall_rating": 84,
+          "form_score": 0.79
+        },
+        {
+          "name": "Sandro Tonali",
+          "position": "MF",
+          "age": 24,
+          "club": "Newcastle",
+          "overall_rating": 83,
+          "form_score": 0.82
+        },
+        {
+          "name": "Gianluigi Donnarumma",
+          "position": "GK",
+          "age": 26,
+          "club": "PSG",
+          "overall_rating": 90,
+          "form_score": 0.86
+        }
+      ]
     },
     {
-        "id": "australia",
-        "name": "Australia",
-        "group": "J",
-        "elo_rating": 1780,
-        "fifa_ranking": 23,
-        "attack_rating": 72,
-        "defense_rating": 73,
-        "momentum_index": 0.68,
-        "formation": "4-4-2",
-        "tactical_style": "counter",
-        "coach": "Tony Popovic",
-        "aliases": [
-            "AUS",
-            "Socceroos"
-        ],
-        "recent_results": [
-            "W",
-            "D",
-            "L",
-            "W",
-            "D"
-        ],
-        "squad": [
-            {
-                "name": "Mathew Ryan",
-                "position": "GK",
-                "age": 32,
-                "club": "AZ Alkmaar",
-                "overall_rating": 81,
-                "form_score": 0.79
-            },
-            {
-                "name": "Mitchell Duke",
-                "position": "FW",
-                "age": 33,
-                "club": "Fagiano Okayama",
-                "overall_rating": 73,
-                "form_score": 0.72
-            }
-        ]
+      "id": "australia",
+      "name": "Australia",
+      "group": "J",
+      "elo_rating": 1780,
+      "fifa_ranking": 23,
+      "attack_rating": 72,
+      "defense_rating": 73,
+      "momentum_index": 0.68,
+      "formation": "4-4-2",
+      "tactical_style": "counter",
+      "coach": "Tony Popovic",
+      "aliases": [
+        "AUS",
+        "Socceroos"
+      ],
+      "recent_results": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "D"
+      ],
+      "squad": [
+        {
+          "name": "Mathew Ryan",
+          "position": "GK",
+          "age": 32,
+          "club": "AZ Alkmaar",
+          "overall_rating": 81,
+          "form_score": 0.79
+        },
+        {
+          "name": "Mitchell Duke",
+          "position": "FW",
+          "age": 33,
+          "club": "Fagiano Okayama",
+          "overall_rating": 73,
+          "form_score": 0.72
+        }
+      ]
     },
     {
-        "id": "saudi-arabia",
-        "name": "Saudi Arabia",
-        "group": "K",
-        "elo_rating": 1770,
-        "fifa_ranking": 56,
-        "attack_rating": 68,
-        "defense_rating": 69,
-        "momentum_index": 0.65,
-        "formation": "4-2-3-1",
-        "tactical_style": "counter",
-        "coach": "Herve Renard",
-        "aliases": [
-            "KSA",
-            "Saudi"
-        ],
-        "recent_results": [
-            "D",
-            "W",
-            "L",
-            "W",
-            "D"
-        ],
-        "squad": [
-            {
-                "name": "Salem Al-Dawsari",
-                "position": "FW",
-                "age": 31,
-                "club": "Al-Hilal",
-                "overall_rating": 79,
-                "form_score": 0.76
-            },
-            {
-                "name": "Mohammed Al-Owais",
-                "position": "GK",
-                "age": 31,
-                "club": "Al-Hilal",
-                "overall_rating": 80,
-                "form_score": 0.78
-            }
-        ]
+      "id": "saudi-arabia",
+      "name": "Saudi Arabia",
+      "group": "K",
+      "elo_rating": 1770,
+      "fifa_ranking": 56,
+      "attack_rating": 68,
+      "defense_rating": 69,
+      "momentum_index": 0.65,
+      "formation": "4-2-3-1",
+      "tactical_style": "counter",
+      "coach": "Herve Renard",
+      "aliases": [
+        "KSA",
+        "Saudi"
+      ],
+      "recent_results": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "D"
+      ],
+      "squad": [
+        {
+          "name": "Salem Al-Dawsari",
+          "position": "FW",
+          "age": 31,
+          "club": "Al-Hilal",
+          "overall_rating": 79,
+          "form_score": 0.76
+        },
+        {
+          "name": "Mohammed Al-Owais",
+          "position": "GK",
+          "age": 31,
+          "club": "Al-Hilal",
+          "overall_rating": 80,
+          "form_score": 0.78
+        }
+      ]
     },
     {
-        "id": "nigeria",
-        "name": "Nigeria",
-        "group": "L",
-        "elo_rating": 1800,
-        "fifa_ranking": 35,
-        "attack_rating": 77,
-        "defense_rating": 74,
-        "momentum_index": 0.70,
-        "formation": "4-3-3",
-        "tactical_style": "counter",
-        "coach": "Eric Chelle",
-        "aliases": [
-            "NGA"
-        ],
-        "recent_results": [
-            "W",
-            "D",
-            "W",
-            "L",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Victor Osimhen",
-                "position": "FW",
-                "age": 26,
-                "club": "Galatasaray",
-                "overall_rating": 87,
-                "form_score": 0.86
-            },
-            {
-                "name": "William Troost-Ekong",
-                "position": "DF",
-                "age": 31,
-                "club": "Watford",
-                "overall_rating": 78,
-                "form_score": 0.75
-            }
-        ]
+      "id": "nigeria",
+      "name": "Nigeria",
+      "group": "L",
+      "elo_rating": 1800,
+      "fifa_ranking": 35,
+      "attack_rating": 77,
+      "defense_rating": 74,
+      "momentum_index": 0.7,
+      "formation": "4-3-3",
+      "tactical_style": "counter",
+      "coach": "Eric Chelle",
+      "aliases": [
+        "NGA"
+      ],
+      "recent_results": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Victor Osimhen",
+          "position": "FW",
+          "age": 26,
+          "club": "Galatasaray",
+          "overall_rating": 87,
+          "form_score": 0.86
+        },
+        {
+          "name": "William Troost-Ekong",
+          "position": "DF",
+          "age": 31,
+          "club": "Watford",
+          "overall_rating": 78,
+          "form_score": 0.75
+        }
+      ]
     },
     {
-        "id": "croatia",
-        "name": "Croatia",
-        "group": "A",
-        "elo_rating": 1870,
-        "fifa_ranking": 10,
-        "attack_rating": 82,
-        "defense_rating": 82,
-        "momentum_index": 0.71,
-        "formation": "4-3-3",
-        "tactical_style": "possession",
-        "coach": "Zlatko Dalic",
-        "aliases": [
-            "CRO"
-        ],
-        "recent_results": [
-            "D",
-            "W",
-            "W",
-            "D",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Luka Modric",
-                "position": "MF",
-                "age": 40,
-                "club": "Real Madrid",
-                "overall_rating": 87,
-                "form_score": 0.82
-            },
-            {
-                "name": "Ivan Perisic",
-                "position": "FW",
-                "age": 35,
-                "club": "Hajduk Split",
-                "overall_rating": 80,
-                "form_score": 0.73
-            },
-            {
-                "name": "Dominik Livakovic",
-                "position": "GK",
-                "age": 29,
-                "club": "Fenerbahce",
-                "overall_rating": 85,
-                "form_score": 0.83
-            }
-        ]
+      "id": "croatia",
+      "name": "Croatia",
+      "group": "A",
+      "elo_rating": 1870,
+      "fifa_ranking": 10,
+      "attack_rating": 82,
+      "defense_rating": 82,
+      "momentum_index": 0.71,
+      "formation": "4-3-3",
+      "tactical_style": "possession",
+      "coach": "Zlatko Dalic",
+      "aliases": [
+        "CRO"
+      ],
+      "recent_results": [
+        "D",
+        "W",
+        "W",
+        "D",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Luka Modric",
+          "position": "MF",
+          "age": 40,
+          "club": "Real Madrid",
+          "overall_rating": 87,
+          "form_score": 0.82
+        },
+        {
+          "name": "Ivan Perisic",
+          "position": "FW",
+          "age": 35,
+          "club": "Hajduk Split",
+          "overall_rating": 80,
+          "form_score": 0.73
+        },
+        {
+          "name": "Dominik Livakovic",
+          "position": "GK",
+          "age": 29,
+          "club": "Fenerbahce",
+          "overall_rating": 85,
+          "form_score": 0.83
+        }
+      ]
     },
     {
-        "id": "switzerland",
-        "name": "Switzerland",
-        "group": "B",
-        "elo_rating": 1855,
-        "fifa_ranking": 19,
-        "attack_rating": 78,
-        "defense_rating": 81,
-        "momentum_index": 0.73,
-        "formation": "4-2-3-1",
-        "tactical_style": "balanced",
-        "coach": "Murat Yakin",
-        "aliases": [
-            "SUI"
-        ],
-        "recent_results": [
-            "W",
-            "D",
-            "W",
-            "W",
-            "D"
-        ],
-        "squad": [
-            {
-                "name": "Xherdan Shaqiri",
-                "position": "FW",
-                "age": 32,
-                "club": "Chicago Fire",
-                "overall_rating": 80,
-                "form_score": 0.74
-            },
-            {
-                "name": "Granit Xhaka",
-                "position": "MF",
-                "age": 32,
-                "club": "Bayer Leverkusen",
-                "overall_rating": 83,
-                "form_score": 0.82
-            }
-        ]
+      "id": "switzerland",
+      "name": "Switzerland",
+      "group": "B",
+      "elo_rating": 1855,
+      "fifa_ranking": 19,
+      "attack_rating": 78,
+      "defense_rating": 81,
+      "momentum_index": 0.73,
+      "formation": "4-2-3-1",
+      "tactical_style": "balanced",
+      "coach": "Murat Yakin",
+      "aliases": [
+        "SUI"
+      ],
+      "recent_results": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "D"
+      ],
+      "squad": [
+        {
+          "name": "Xherdan Shaqiri",
+          "position": "FW",
+          "age": 32,
+          "club": "Chicago Fire",
+          "overall_rating": 80,
+          "form_score": 0.74
+        },
+        {
+          "name": "Granit Xhaka",
+          "position": "MF",
+          "age": 32,
+          "club": "Bayer Leverkusen",
+          "overall_rating": 83,
+          "form_score": 0.82
+        }
+      ]
     },
     {
-        "id": "ecuador",
-        "name": "Ecuador",
-        "group": "C",
-        "elo_rating": 1800,
-        "fifa_ranking": 41,
-        "attack_rating": 73,
-        "defense_rating": 72,
-        "momentum_index": 0.66,
-        "formation": "4-4-2",
-        "tactical_style": "counter",
-        "coach": "Sebastian Beccacece",
-        "aliases": [
-            "ECU"
-        ],
-        "recent_results": [
-            "W",
-            "L",
-            "W",
-            "D",
-            "W"
-        ],
-        "squad": [
-            {
-                "name": "Enner Valencia",
-                "position": "FW",
-                "age": 34,
-                "club": "Fenerbahce",
-                "overall_rating": 79,
-                "form_score": 0.74
-            }
-        ]
+      "id": "ecuador",
+      "name": "Ecuador",
+      "group": "C",
+      "elo_rating": 1800,
+      "fifa_ranking": 41,
+      "attack_rating": 73,
+      "defense_rating": 72,
+      "momentum_index": 0.66,
+      "formation": "4-4-2",
+      "tactical_style": "counter",
+      "coach": "Sebastian Beccacece",
+      "aliases": [
+        "ECU"
+      ],
+      "recent_results": [
+        "W",
+        "L",
+        "W",
+        "D",
+        "W"
+      ],
+      "squad": [
+        {
+          "name": "Enner Valencia",
+          "position": "FW",
+          "age": 34,
+          "club": "Fenerbahce",
+          "overall_rating": 79,
+          "form_score": 0.74
+        }
+      ]
     },
     {
-        "id": "belgium",
-        "name": "Belgium",
-        "group": "D",
-        "elo_rating": 1910,
-        "fifa_ranking": 3,
-        "attack_rating": 85,
-        "defense_rating": 82,
-        "momentum_index": 0.77,
-        "formation": "3-4-3",
-        "tactical_style": "possession",
-        "coach": "Domenico Tedesco",
-        "aliases": [
-            "BEL"
-        ],
-        "recent_results": [
-            "W",
-            "W",
-            "D",
-            "W",
-            "D"
-        ],
-        "squad": [
-            {
-                "name": "Kevin De Bruyne",
-                "position": "MF",
-                "age": 35,
-                "club": "Manchester City",
-                "overall_rating": 89,
-                "form_score": 0.83
-            },
-            {
-                "name": "Romelu Lukaku",
-                "position": "FW",
-                "age": 32,
-                "club": "Napoli",
-                "overall_rating": 83,
-                "form_score": 0.80
-            },
-            {
-                "name": "Jeremy Doku",
-                "position": "FW",
-                "age": 22,
-                "club": "Manchester City",
-                "overall_rating": 83,
-                "form_score": 0.85
-            }
-        ]
+      "id": "belgium",
+      "name": "Belgium",
+      "group": "D",
+      "elo_rating": 1910,
+      "fifa_ranking": 3,
+      "attack_rating": 85,
+      "defense_rating": 82,
+      "momentum_index": 0.77,
+      "formation": "3-4-3",
+      "tactical_style": "possession",
+      "coach": "Domenico Tedesco",
+      "aliases": [
+        "BEL"
+      ],
+      "recent_results": [
+        "W",
+        "W",
+        "D",
+        "W",
+        "D"
+      ],
+      "squad": [
+        {
+          "name": "Kevin De Bruyne",
+          "position": "MF",
+          "age": 35,
+          "club": "Manchester City",
+          "overall_rating": 89,
+          "form_score": 0.83
+        },
+        {
+          "name": "Romelu Lukaku",
+          "position": "FW",
+          "age": 32,
+          "club": "Napoli",
+          "overall_rating": 83,
+          "form_score": 0.8
+        },
+        {
+          "name": "Jeremy Doku",
+          "position": "FW",
+          "age": 22,
+          "club": "Manchester City",
+          "overall_rating": 83,
+          "form_score": 0.85
+        }
+      ]
     }
-]
+  ]
+}

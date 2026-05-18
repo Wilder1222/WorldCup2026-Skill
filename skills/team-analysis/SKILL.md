@@ -72,3 +72,6 @@ Invoke this skill when asked to:
 - NEVER fabricate ELO or FIFA rankings without data source
 - ALWAYS note confidence reduction for synthetic/estimated data
 - ALWAYS include squad depth even if squad list is partial
+- **When using local cache data, always include `"data_source": "local_cache_unverified"` in the output**
+- **Player ages, club affiliations, ratings, and recent form must be current as of 2026-05-18; otherwise label as "historical data — update required"**
+- **Any group assignments and match schedules must follow FIFA official announcements**

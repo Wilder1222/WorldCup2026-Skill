@@ -1,34 +1,44 @@
 # ⚽ WorldCup 2026 AI Skills System
 
-## Overview
+> **World Cup opens June 11, 2026** — 48 teams, 3 countries (USA / Canada / Mexico)
 
-**worldcup2026-skills** is a cross-platform AI football intelligence system for the 2026 FIFA World Cup. It functions as an installable AI capability layer — not a chatbot, not a single app, but a reusable AI skill infrastructure.
+**worldcup2026-skills** is a cross-platform AI football intelligence system for the 2026 FIFA World Cup. It functions as an installable AI capability layer — not a chatbot, not a single app, but a reusable AI skill infrastructure that plugs into Claude, GitHub Copilot, and the CLI.
 
 > "npm for AI football reasoning capabilities"
 
 ---
 
+## Quick Start
+
+### Claude Code Plugin (Recommended)
+
+```bash
+# Install via Claude Code (in-chat)
+/plugins add marketplace https://github.com/worldcup2026/worldcup2026-skills
+
+# Or via CLI
+claude plugins add marketplace https://github.com/worldcup2026/worldcup2026-skills
+```
+
+See [INSTALLATION.md](INSTALLATION.md) for all platform setup guides.
+
+---
+
 ## Installation & Usage
 
-### 1. npx (Project-Level / One-Shot)
+### 1. Claude Code Plugin (Recommended)
+
+The `.claude-plugin/` directory contains a full Claude Code plugin manifest. After installation, all 6 skills are auto-loaded and available as `/worldcup2026-skills:<skill>` commands.
 
 ```bash
-npx worldcup2026-skills predict "Brazil vs Argentina"
-npx worldcup2026-skills analyze-team "France"
-npx worldcup2026-skills player "Kylian Mbappe"
-npx worldcup2026-skills schedule --stage group
-npx worldcup2026-skills simulate "England vs Spain" --iterations 10000
+# Install via Claude Code (in-chat)
+/plugins add marketplace https://github.com/worldcup2026/worldcup2026-skills
+
+# Or via CLI
+claude plugins add marketplace https://github.com/worldcup2026/worldcup2026-skills
 ```
 
-### 2. Global Install
-
-```bash
-npm install -g worldcup2026-skills
-wc2026 predict "Germany vs Portugal"
-wc2026 standings --group A
-```
-
-### 3. Claude Skills / Claude Projects
+### 2. Claude / Claude Projects
 
 Add to your Claude Project instructions or use `CLAUDE.md` as the system prompt. All skills in `skills/*/SKILL.md` are auto-loaded.
 
@@ -37,16 +47,34 @@ Add to your Claude Project instructions or use `CLAUDE.md` as the system prompt.
 Attach this repository and reference CLAUDE.md
 ```
 
-### 4. GitHub Copilot Extension
+### 3. GitHub Copilot Extension
 
-The `.github/copilot-instructions.md` and `AGENTS.md` files configure Copilot to use this system's agents and skills automatically.
+The `.github/copilot-instructions.md` and `AGENTS.md` files configure Copilot to use this system's agents and skills automatically — just open this workspace in VS Code.
+
+### 4. npx (One-Shot CLI)
+
+```bash
+npx github:worldcup2026/worldcup2026-skills predict "Brazil vs Argentina"
+npx github:worldcup2026/worldcup2026-skills analyze-team "France"
+npx github:worldcup2026/worldcup2026-skills player "Kylian Mbappe"
+npx github:worldcup2026/worldcup2026-skills schedule --stage group
+npx github:worldcup2026/worldcup2026-skills simulate "England vs Spain" --iterations 10000
+```
+
+### 5. Global Install
+
+```bash
+npm install -g github:worldcup2026/worldcup2026-skills
+wc2026 predict "Germany vs Portugal"
+wc2026 standings --group A
+```
 
 ---
 
 ## Core Skills
 
 | Skill | Capability |
-|-------|-----------|
+|-------|------------|
 | `team-analysis` | Squad strength, tactical style, formation, momentum |
 | `schedule-fetcher` | Fixtures, group standings, knockout bracket |
 | `player-analysis` | Player ratings, impact score, injury risk |
@@ -56,11 +84,13 @@ The `.github/copilot-instructions.md` and `AGENTS.md` files configure Copilot to
 
 ## Prediction Models
 
-- **ELO Rating** — Dynamic team strength based on historical results
-- **Bayesian Probability** — Prior + evidence posterior inference
-- **Expected Goals (xG)** — Shot quality and scoring probability
-- **Monte Carlo Simulation** — ≥10,000 match simulations
-- **ML Ensemble** — Gradient boosting + logistic regression + neural probability
+| Model | Method |
+|-------|--------|
+| **ELO Rating** | Dynamic team strength based on historical results |
+| **Bayesian Probability** | Prior + evidence posterior inference |
+| **Expected Goals (xG)** | Shot quality and scoring probability |
+| **Monte Carlo Simulation** | ≥10,000 match simulations |
+| **ML Ensemble** | Gradient boosting + logistic regression + neural probability |
 
 ## Multi-Agent Architecture
 
@@ -83,6 +113,8 @@ Memory Agent → update evolution state
     ↓
 Final Structured Report
 ```
+
+All agent definitions are documented in [AGENTS.md](AGENTS.md).
 
 ## Self-Evolving System
 
@@ -114,21 +146,35 @@ All skills return structured JSON:
 
 ---
 
+## Data Notice
+
+`data/teams.json` and `data/fixtures.json` are **sample data** (`SAMPLE_DATA_UNVERIFIED`). The 2026 World Cup group draw has not been confirmed — outputs must be treated as illustrative, not official. Verified real-time data takes priority when provided by the user.
+
+---
+
 ## Project Structure
 
 ```
 worldcup2026-skills/
-├── bin/worldcup-skills.js     # npx CLI entry
+├── .claude-plugin/            # Claude Code plugin metadata
+│   ├── plugin.json            # Plugin manifest
+│   └── marketplace.json       # Marketplace catalog
+├── .github/
+│   └── copilot-instructions.md  # GitHub Copilot config
+├── bin/worldcup-skills.js     # npx / global CLI entry
 ├── src/
-│   ├── index.js               # Library entry
-│   ├── agents/                # Multi-agent system (8 agents)
-│   ├── models/                # Prediction models (5 models)
+│   ├── index.js               # Library entry point
+│   ├── agents/                # 8 multi-agents
+│   ├── models/                # 5 prediction models
 │   ├── evolution/             # Self-evolving system
-│   └── memory/                # Short/long-term memory
-├── skills/                    # AI Skill definitions (SKILL.md + impl)
-├── data/                      # Teams, fixtures, historical data
-├── prompts/                   # System prompts per skill
-└── schemas/                   # JSON Schema definitions
+│   └── memory/                # Short/long-term knowledge store
+├── skills/                    # 6 AI Skill definitions (SKILL.md)
+├── data/                      # Teams, fixtures, historical data ⚠️ sample
+├── prompts/                   # System prompts
+├── docs/                      # Architecture & design docs
+├── CLAUDE.md                  # Claude / Claude Projects config
+├── AGENTS.md                  # Multi-agent definitions
+└── INSTALLATION.md            # Full platform installation guide
 ```
 
 ---
@@ -136,3 +182,7 @@ worldcup2026-skills/
 ## License
 
 MIT
+
+---
+
+[中文版 README →](README_CN.md)

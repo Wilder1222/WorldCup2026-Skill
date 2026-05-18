@@ -14,12 +14,23 @@ consumes: any_data_source
 
 Abstract all data source access. The rest of the system should never care WHERE data comes from — only what shape it arrives in.
 
+## ⚠️ Data Verification Requirements (Mandatory)
+
+**Current date: 2026-05-18. World Cup opens: 2026-06-11.**
+
+All team, fixture, and player data must follow these rules:
+
+1. **Never substitute historical data for current data** — any data from local cache must be explicitly labeled
+2. **Never fabricate data** — rankings, ratings, or squad lists without a confirmable source must be labeled as "estimated"
+3. **Always disclose data source** — the `data_source` field must be populated in every analysis output
+4. **Reduce confidence** — when using unverified local cache data, automatically reduce confidence by 30%
+
 ## Data Sources (Priority Order)
 
-1. **Local cache** — `data/teams.json`, `data/fixtures.json`
-2. **Historical datasets** — `data/historical.json`
-3. **Manual ingestion** — User-provided JSON payloads
-4. **External APIs** (future) — football-data.org, API-Football, SofaScore
+1. **User-provided current data** — data explicitly provided by the user in conversation (highest priority)
+2. **Local cache (⚠️ unverified)** — `data/teams.json`, `data/fixtures.json` (`data_status: SAMPLE_DATA_UNVERIFIED`)
+3. **Historical datasets** — `data/historical.json` (trend analysis only, does not represent current state)
+4. **Synthetic data** — estimated data generated when no source is available (lowest confidence)
 
 ## Data Normalization
 
@@ -82,9 +93,27 @@ The data provider implements fuzzy team/player name matching to handle:
 - "Holland" → "Netherlands"
 - "Mbappe" → "Kylian Mbappe"
 
+## Data Provenance (Required in All Outputs)
+
+Every normalized data record must include a `_data_provenance` field:
+
+```json
+{
+  "_data_provenance": {
+    "source": "local_cache_unverified | user_provided | synthetic",
+    "last_updated": "YYYY-MM-DD",
+    "verified": false,
+    "confidence_adjustment": -0.30,
+    "note": "Data not officially verified — refer to FIFA official data"
+  }
+}
+```
+
 ## Synthetic Data Warning
 
 When no real data is found, synthetic profiles are generated with:
 - `synthetic: true` flag
+- `data_source: "synthetic"` in `_data_provenance`
 - Reduced confidence (-30% applied by calling skill)
 - ELO defaulting to 1400 (below average international)
+- **Must explicitly inform the user that data is synthetic/estimated**

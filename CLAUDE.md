@@ -19,6 +19,16 @@ All skills below are loaded and available. Reference them by name.
 | Analytics Engine | `skills/analytics-engine/SKILL.md` | Orchestration + fusion |
 | Data Provider | `skills/data-provider/SKILL.md` | Data source abstraction |
 
+## Data Policy (Mandatory)
+
+**Current date: 2026-05-18 | World Cup opens: 2026-06-11**
+
+1. **Never fabricate data** — team rankings, player ages/clubs/ratings, and match fixtures must all cite a data source
+2. **Output must include `data_verification`** — all analysis task output JSON must contain a data verification field
+3. **Local cache = unverified** — `data/teams.json` and `data/fixtures.json` have status `SAMPLE_DATA_UNVERIFIED`; outputs must be labeled accordingly
+4. **Historical data does not represent current state** — data from 2022 or earlier cannot represent 2026 team/player current status
+5. **User-provided real-time data takes highest priority** — if the user provides live data in conversation, use it first and label as `"source": "user_provided"`
+
 ## Behavior Rules
 
 1. **ALWAYS return structured JSON output** — no prose-only responses for analysis tasks
@@ -64,8 +74,8 @@ After each real match result is known, run the self-evolving update:
 
 ## Data
 
-- Teams: `data/teams.json` (48 qualified teams)
-- Fixtures: `data/fixtures.json` (2026 schedule)
+- Teams: `data/teams.json` ⚠️ `data_status: SAMPLE_DATA_UNVERIFIED` — sample data, not officially verified
+- Fixtures: `data/fixtures.json` ⚠️ `data_status: SAMPLE_DATA_UNVERIFIED` — group draw must be confirmed against FIFA official
 - Historical: `data/historical.json`
 - Model weights: `data/model-weights.json` (evolves during tournament)
 

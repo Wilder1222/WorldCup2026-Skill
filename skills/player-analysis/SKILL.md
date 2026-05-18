@@ -44,6 +44,13 @@ Invoke when asked:
   "analysis_type": "player_analysis",
   "confidence": 0.0,
   "model_sources": ["player-analyst"],
+  "data_verification": {
+    "source": "local_cache_unverified | user_provided",
+    "data_as_of": "2026-05-18",
+    "age_verified": false,
+    "club_verified": false,
+    "note": "Player age, club, and ratings must be verified against the latest official data; otherwise labeled as estimated"
+  },
   "results": {
     "name": "",
     "position": "",
@@ -58,3 +65,9 @@ Invoke when asked:
   }
 }
 ```
+
+## Data Verification Rules
+
+- **Player age**: must be calculated relative to the first match date (2026-06-11)
+- **Club information**: the 2026 transfer window may have changed club affiliations; always label with data date
+- **Form data**: if using local cache, set `"form_data_unverified": true`
