@@ -1,0 +1,42 @@
+{
+    "name": "worldcup2026-skills",
+    "version": "1.0.0",
+    "description": "⚽ 2026 FIFA World Cup AI Skills System — Cross-platform AI football intelligence. Works with Claude, Copilot, Codex, MCP, and npx.",
+    "main": "src/index.js",
+    "bin": {
+        "worldcup2026-skills": "bin/worldcup-skills.js",
+        "wc2026": "bin/worldcup-skills.js"
+    },
+    "scripts": {
+        "start": "node bin/worldcup-skills.js",
+        "test": "node tests/run.js"
+    },
+    "keywords": [
+        "worldcup",
+        "worldcup2026",
+        "football",
+        "soccer",
+        "ai-skills",
+        "prediction",
+        "claude-skill",
+        "copilot-extension",
+        "mcp",
+        "codex"
+    ],
+    "author": "WorldCup2026 AI Skills Project",
+    "license": "MIT",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "files": [
+        "bin/",
+        "src/",
+        "skills/",
+        "prompts/",
+        "data/",
+        "schemas/",
+        "CLAUDE.md",
+        "AGENTS.md",
+        "README.md"
+    ]
+}
