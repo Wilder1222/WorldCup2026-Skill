@@ -126,16 +126,9 @@ worldcup2026-skills/
 │   ├── evolution/             # Self-evolving system
 │   └── memory/                # Short/long-term memory
 ├── skills/                    # AI Skill definitions (SKILL.md + impl)
-├── adapters/                  # Platform adapters
-│   ├── claude/                # Claude Skills API
-│   ├── codex/                 # OpenAI tool functions
-│   ├── copilot/               # GitHub Copilot extension
-│   ├── mcp-server/            # MCP Tool Server
-│   └── api/                   # REST API server
 ├── data/                      # Teams, fixtures, historical data
 ├── prompts/                   # System prompts per skill
-├── schemas/                   # JSON Schema definitions
-└── plugins/                   # Marketplace manifests
+└── schemas/                   # JSON Schema definitions
 ```
 
 ---

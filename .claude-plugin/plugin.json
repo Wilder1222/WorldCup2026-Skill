@@ -1,0 +1,19 @@
+{
+    "name": "worldcup2026-skills",
+    "version": "1.0.0",
+    "description": "AI Football Intelligence System for the 2026 FIFA World Cup — multi-model prediction, team analysis, player evaluation, and schedule lookup.",
+    "author": {
+        "name": "WorldCup2026 AI Skills Project"
+    },
+    "homepage": "https://github.com/worldcup2026/worldcup2026-skills",
+    "repository": "https://github.com/worldcup2026/worldcup2026-skills",
+    "license": "MIT",
+    "keywords": [
+        "worldcup",
+        "football",
+        "soccer",
+        "ai",
+        "prediction",
+        "2026"
+    ]
+}

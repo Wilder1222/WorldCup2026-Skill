@@ -57,13 +57,6 @@ async function main() {
         process.exit(0);
     }
 
-    // MCP Server mode
-    if (args.includes('--mcp')) {
-        const { startMcpServer } = require('../adapters/mcp-server/index');
-        await startMcpServer();
-        return;
-    }
-
     const system = new WorldCupSkillsSystem();
     const command = args[0];
 

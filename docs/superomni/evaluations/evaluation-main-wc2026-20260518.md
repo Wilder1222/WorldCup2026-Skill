@@ -22,16 +22,13 @@
 - [x] Zero external runtime dependencies (pure Node.js)
 - [x] All outputs follow `{ analysis_type, confidence, model_sources, results }` schema
 
-## Cross-Platform Support
+## Integration Support
 
-| Platform | Adapter | Status |
+| Platform | Entry Point | Status |
 |----------|---------|--------|
 | npx CLI | bin/worldcup-skills.js | ✅ Working |
-| Claude Skills | adapters/claude/ | ✅ Tool defs + handler |
-| Copilot Extension | adapters/copilot/ | ✅ Slash commands |
-| OpenAI Codex | adapters/codex/tools.json | ✅ OpenAI function format |
-| MCP Server | adapters/mcp-server/ | ✅ stdio JSON-RPC |
-| REST API | adapters/api/ | ✅ HTTP server |
+| Claude Skills | CLAUDE.md + skills/*.SKILL.md | ✅ Ready |
+| Copilot Extension | .github/copilot-instructions.md + AGENTS.md | ✅ Ready |
 
 ## Status
 DONE

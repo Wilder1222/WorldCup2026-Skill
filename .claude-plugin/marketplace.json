@@ -1,0 +1,28 @@
+{
+    "name": "worldcup2026",
+    "description": "2026 FIFA World Cup AI Skills — football intelligence, match prediction, team & player analysis.",
+    "owner": {
+        "name": "WorldCup2026 AI Skills Project"
+    },
+    "plugins": [
+        {
+            "name": "worldcup2026-skills",
+            "source": ".",
+            "description": "AI Football Intelligence System for 2026 FIFA World Cup. Provides multi-model match prediction (ELO + Bayesian + xG + Monte Carlo + ML), team analysis, player evaluation, and schedule lookup.",
+            "version": "1.0.0",
+            "author": {
+                "name": "WorldCup2026 AI Skills Project"
+            },
+            "license": "MIT",
+            "keywords": [
+                "worldcup",
+                "football",
+                "soccer",
+                "ai",
+                "prediction",
+                "2026"
+            ],
+            "category": "sports"
+        }
+    ]
+}

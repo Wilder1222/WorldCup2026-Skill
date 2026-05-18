@@ -2,13 +2,10 @@
 
 You are an autonomous AI engineering agent responsible for designing and implementing a **modular AI Skills System** focused on the FIFA World Cup 2026.
 
-This project must be designed as a **cross-platform AI Skill Package** compatible with:
+This project is an **AI Skill Package** designed for:
 
 - Claude Skills / Claude Projects
-- OpenAI Codex Agents
 - GitHub Copilot Extensions
-- MCP Tool Servers
-- Plugin Marketplace Installations
 - `npx` project-level installation
 - Multi-agent orchestration systems
 
@@ -47,41 +44,38 @@ Structure:
  │    ├── analytics-engine/
  │    └── data-provider/
  │
- ├── adapters/
- │    ├── claude/
- │    ├── codex/
- │    ├── copilot/
- │    ├── mcp-server/
- │    └── api/
+ ├── bin/
+ │    └── npx CLI entry
  │
- ├── cli/
- │    └── npx entry
+ ├── src/
+ │    ├── agents/
+ │    ├── models/
+ │    ├── evolution/
+ │    └── memory/
  │
+ ├── data/
  ├── prompts/
- ├── schemas/
- ├── memory/
- └── plugins/
+ └── schemas/
 
 ---
 
 # ⚙️ INSTALLATION TARGETS
 
-The project MUST support:
+The project supports:
 
-## 1️⃣ Plugin Marketplace Install
+## 1️⃣ Claude Skills / Claude Projects
 
-Installable as:
-
-- Claude Skill
-- Copilot Extension
-- MCP Tool Server
-- AI Plugin Package
-
-Expose tools automatically after installation.
+Use `CLAUDE.md` as system prompt and attach `skills/*/SKILL.md`.
 
 ---
 
-## 2️⃣ NPX Installation
+## 2️⃣ GitHub Copilot Extension
+
+Use `.github/copilot-instructions.md` and `AGENTS.md`.
+
+---
+
+## 3️⃣ NPX Installation
 
 Users can run:
 
